@@ -1,50 +1,36 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { teamImages } from "../src/data/team";
+import { useEffect, useState } from 'react'
+import {teamImages} from "../src/data/team"
+import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
-  const [teams, setTeams] = useState([]);
+const home = () => {
+
+  const [team, setTeam] = useState([])
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useEffect(()=>{
     fetch("http://localhost:5000/ipl")
-      .then(res => res.json())
-      .then(data => setTeams(data));
-  }, []);
-
-
+    .then(res => res.json())
+    .then(data => setTeam(data))
+  }, [])
   return (
-    <div className="min-h-screen bg-gray-100 px-6 py-10">
-      <h1 className="text-3xl font-bold text-center mb-10">IPL Teams</h1>
+    <div className="m-h-screen bg-gray-200 px-6 py-10">
+      <h1 className="text-center text-3xl font-bold mb-5">IPL Teams</h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-        {teams.length === 0 ? (
-          <p className="text-center">Loading teams...</p>
-        ): (
-          teams.map((team) => (
-            
-          <div
-            key={team._id}
-            onClick={() => navigate(`/ipl/${team._id}`)} // ✅ ID correct
-            className="flex flex-col items-center bg-white p-4 rounded-xl shadow-md
-                       cursor-pointer hover:scale-105 transition"
-          >
-            <img
-              src={teamImages[team.team]}   // ✅ team.team = "RCB"
-              alt={team.team}
-              className="w-32 h-32 object-contain"
-            />
-
-            <p className="text-center mt-4 font-semibold text-gray-700">
-              {team.team}
-            </p>
-          </div>
+      
+      <div className='grid grid-cols-2 sm:grid-cols-4 gap-8'>
+      {team.length === 0 ? (
+        <p className='text-center'>Loading teams...</p>
+      ):(
+        team.map((team) =>(
+          <div onClick={()=>navigate(`/ipl/${team._id}`)} key={team._id} className='cursor-pointer text-center bg-white flex flex-col justify-center items-center'>
+          <img src={teamImages[team.team]} alt={team.team} className='object-contain w-35 h-40'/>
+          <p className='text-center text-xl font-bold'>{team.team}</p>
+        </div>
         ))
-        )}
-        
+      )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default home
