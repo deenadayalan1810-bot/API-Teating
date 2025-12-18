@@ -22,7 +22,7 @@ const home = () => {
         <p className='text-center'>Loading teams...</p>
       ):(
         team.map((team) =>(
-          <div onClick={()=>navigate(`/ipl/${team._id}`)} key={team._id} className='cursor-pointer text-center bg-white flex flex-col justify-center items-center'>
+          <div onClick={()=>navigate(`/ipl/team/${team.teamId}`)} key={team.teamId} className='cursor-pointer text-center bg-white flex flex-col justify-center items-center'>
           <img src={teamImages[team.team]} alt={team.team} className='object-contain w-35 h-40'/>
           <p className='text-center text-xl font-bold'>{team.team}</p>
         </div>

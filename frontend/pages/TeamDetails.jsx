@@ -6,13 +6,13 @@ import { playerImages, DEFAULT} from '../src/data/player_Images'
 const TeamDetails = () => {
 
   const [teams, setTeams] = useState(null)
-  const {id} = useParams();
+  const {teamId} = useParams();
   const navigate = useNavigate();
   useEffect(()=>{
-    fetch(`http://localhost:5000/ipl/${id}`)
+    fetch(`http://localhost:5000/ipl/team/${teamId}`)
     .then(res => res.json())
     .then(data => setTeams(data))
-  }, [id]);
+  }, [teamId]);
 
   const playersImagebg = {
     RCB : "bg-[#b60e11]",
