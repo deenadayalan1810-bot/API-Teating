@@ -17,13 +17,17 @@ const TeamDetails = () => {
   const playersImagebg = {
     RCB : "bg-[#b60e11]",
     CSK : "bg-[#ffd200]",
-    MI : "bg-[#083f88]"
+    MI : "bg-[#083f88]",
+    KKR : "bg-[#3a225d]",
+    RR : "bg-[#e50693]"
   }
 
   const playersBorder = {
     RCB : "from-[#151517] via-[#191518] to-transparent",
     CSK : "from-[#39399E] via-[#1478E3] to-transparent",
-    MI : "from-[#020621] via-[#001848] to-transparent"
+    MI : "from-[#020621] via-[#001848] to-transparent",
+    KKR : "from-[#f2bf26] via-[#f2bf2699] to-transparent",
+    RR : "from-[#2e133a] via-[#421b56] to-transparent"
   }
 
   if(!teams){
@@ -39,14 +43,14 @@ const TeamDetails = () => {
         <h2 className='text-center mb-20 font-semibold text-3xl'>Titles Won: {teams.titleWon}</h2>
         <h2 className='text-2xl font-semibold text-center font-semibold mb-2'>Players</h2>
         
-        <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-3'>
+        <div className='grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3'>
           {teams.players.map((player, index)=>(
             <div key={index}
             className='flex flex-col items-center'
             >
               <div className='border-1 relative overflow-hidden rounded-lg shadow-md'>
               <img
-              className={`${playersImagebg[teams.team] || "bg-gray-300"} sm:w-40 sm:h-35 md:w-70 md:h-60  rounded-sm object-contain mx-auto`}
+              className={`${playersImagebg[teams.team] || "bg-gray-300"} sm:w-50 sm:h-35 md:w-70 md:h-60  rounded-sm object-contain mx-auto`}
               src={playerImages[teams.team]?.[index] || DEFAULT} alt={player} />
               <div className={`absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t ${playersBorder[teams.team] || "from-blue-600/100"}  to-transparent blur-sm`}>
               </div>

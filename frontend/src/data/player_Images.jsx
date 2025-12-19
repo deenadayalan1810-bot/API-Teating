@@ -6,8 +6,8 @@ import RCB3 from "../assets/rcb/Rajat.png";
 import RCB4 from "../assets/rcb/david.png";
 import RCB5 from "../assets/rcb/jitesh.png";
 import RCB6 from "../assets/rcb/krunal.png";
-import RCB7 from "../assets/rcb/dayal.png";
-import RCB8 from "../assets/rcb/bhuvi.png";
+import RCB7 from "../assets/rcb/bhuvi.png";
+import RCB8 from "../assets/rcb/dayal.png";
 import RCB9 from "../assets/rcb/hazelwood.png";
 import RCB10 from "../assets/rcb/suyash.png";
 
@@ -36,6 +36,32 @@ import csk7 from "../assets/csk/c7.png";
 import csk8 from "../assets/csk/c8.png";
 import csk9 from "../assets/csk/c9.png";
 import csk10 from "../assets/csk/c10.png";
+
+// kkr-players
+import k0 from "../assets/kkr/k0.webp";
+import k1 from "../assets/kkr/k1.webp";
+import k2 from "../assets/kkr/k2.webp";
+import k3 from "../assets/kkr/k3.webp";
+import k4 from "../assets/kkr/k4.webp";
+import k5 from "../assets/kkr/k5.webp";
+import k6 from "../assets/kkr/k6.webp";
+import k7 from "../assets/kkr/k7.webp";
+import k8 from "../assets/kkr/k8.webp";
+import k9 from "../assets/kkr/k9.webp";
+import k10 from "../assets/kkr/k10.webp";
+
+// RR-players
+import r0 from "../assets/rr/r0.webp";
+import r1 from "../assets/rr/r1.webp";
+import r2 from "../assets/rr/r2.webp";
+import r3 from "../assets/rr/r3.webp";
+import r4 from "../assets/rr/r4.webp";
+import r5 from "../assets/rr/r5.webp";
+import r6 from "../assets/rr/r6.webp";
+import r7 from "../assets/rr/r7.webp";
+import r8 from "../assets/rr/r8.webp";
+import r9 from "../assets/rr/r9.webp";
+import r10 from "../assets/rr/r10.webp";
 
 import profile from "../assets/cricket-prof.png";
 
@@ -77,6 +103,32 @@ export const playerImages = {
         csk8,
         csk9,
         csk10
+    ],
+    KKR : [
+        k0,
+        k1,
+        k2,
+        k3,
+        k4,
+        k5,
+        k6,
+        k7,
+        k8,
+        k9,
+        k10
+    ],
+    RR : [
+        r0,
+        r1,
+        r2,
+        r3,
+        r4,
+        r5,
+        r6,
+        r7,
+        r8,
+        r9,
+        r10
     ]
 }
 
