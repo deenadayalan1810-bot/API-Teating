@@ -19,7 +19,7 @@ const TeamDetails = () => {
     CSK : "bg-[#ffd200]",
     MI : "bg-[#083f88]",
     KKR : "bg-[#3a225d]",
-    RR : "bg-[#e50693]"
+    RR : "bg-[#e50692]"
   }
 
   const playersBorder = {
